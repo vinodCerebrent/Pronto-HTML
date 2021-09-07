@@ -1,0 +1,47 @@
+.btnSwitch {
+    margin: 0;
+    position: relative;
+    // padding-left: 2.3125rem;
+    // min-height: 1.5rem;
+    cursor: pointer;
+    .btnSwitchCheck {
+        width: 2.3125rem;
+        height: 1.5rem;
+        border-radius: 5rem;
+        background-color: var(--border-2);
+        // position: absolute;
+        // left: 0;
+        // top: 0;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        @include transition;
+        &:after {
+            content: "";
+            width: 1.25rem;
+            height: 1.25rem;
+            position: absolute;
+            top: 0.125rem;
+            left: 0.125rem;
+            background-color: var(--border-1);
+            border-radius: 50%;
+            @include transition;
+        }
+    }
+    .btnSwitchText {
+        margin-left: 1.25rem;
+    }
+    input {
+        display: none;
+        &:checked {
+            & + .btnSwitchCheck {
+                background-color: var(--primary-2);
+                &:after {
+                    left: 0.875rem;
+                    background-color: var(--white);
+                    box-shadow: -3px 0px 7px rgba($black, 0.25);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.checkBox {
+    margin: 0;
+    position: relative;
+    padding-left: 1.75rem;
+    cursor: pointer;
+    .checkBoxCheck {
+        width: 1.125rem;
+        height: 1.125rem;
+        border: 1px solid var(--border-2);
+        background-color: var(--border-1);
+        border-radius: 0.3125rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    input {
+        display: none;
+        &:checked {
+            & + .checkBoxCheck {
+                border-color: var(--primary-2);
+                @include var(background-color, primary-2);
+                background-image: url(../images/checkbox.png);
+            }
+        }
+    }
+    a {
+        color: inherit;
+        font-weight: $fontMedium;
+        &:hover {
+            @include var(color, primary-1);
+        }
+    }
+}

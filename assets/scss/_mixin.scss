@@ -1,0 +1,189 @@
+@mixin min($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+@mixin max($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+$colors: (
+    "white": $white,
+    "black": $black,
+    primary-1: $primary-1,
+    primary-2: $primary-2,
+    primary-3: $primary-3,
+    primary-4: $primary-4,
+    primary-5: $primary-5,
+    primary-6: $primary-6,
+    primary-7: $primary-7,
+    primary-8: $primary-8,
+    primary-9: $primary-9,
+    secondary-1: $secondary-1,
+    secondary-2: $secondary-2,
+    secondary-3: $secondary-3,
+    secondary-4: $secondary-4,
+    secondary-5: $secondary-5,
+    secondary-6: $secondary-6,
+    secondary-7: $secondary-7,
+    secondary-8: $secondary-8,
+    secondary-9: $secondary-9,
+    secondary-10: $secondary-10,
+    secondary-11: $secondary-11,
+    secondary-12: $secondary-12,
+    secondary-13: $secondary-13,
+    secondary-14: $secondary-14,
+    secondary-15: $secondary-15,
+    secondary-16: $secondary-16,
+    secondary-17: $secondary-17,
+    secondary-18: $secondary-18,
+    secondary-19: $secondary-19,
+    secondary-20: $secondary-20,
+    secondary-21: $secondary-21,
+    secondary-22: $secondary-22,
+    secondary-23: $secondary-23,
+    secondary-24: $secondary-24,
+    gray-1: $gray-1,
+    gray-2: $gray-2,
+    gray-3: $gray-3,
+    gray-4: $gray-4,
+    gray-5: $gray-5,
+    gray-6: $gray-6,
+    gray-7: $gray-7,
+    border-1: $border-1,
+    border-2: $border-2,
+    border-3: $border-3,
+    border-4: $border-4,
+    border-5: $border-5,
+);
+
+@mixin var($key, $val) {
+    #{$key}: map-get($colors, $val);
+}
+
+@each $color, $values in $colors {
+    .text-#{$color} {
+        color: $values !important;
+    }
+    .text-#{$color} {
+        circle {
+            fill: $values !important;
+        }
+    }
+    .bg-#{$color} {
+        background-color: $values !important;
+    }
+}
+
+$borders: (
+    border-1: $border-1,
+    border-2: $border-2,
+    border-3: $border-3,
+    border-4: $border-4,
+);
+
+@each $name, $values in $borders {
+    .color-#{$name} {
+        border-color: $values !important;
+    }
+}
+
+
+
+@mixin grid($cols, $mgn) {
+    width: ((100% - (($cols - 1) * $mgn)) / $cols);
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
+@mixin transition {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+@mixin objectImg {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+@mixin bgGradient {
+    background: -webkit-gradient(linear, left bottom, left top, from(#9dd7c5), to(#9dd7c5));
+    background: -o-linear-gradient(bottom, #9dd7c5, #9dd7c5);
+    background: linear-gradient(0deg, #9dd7c5, #9dd7c5);
+}
+@mixin dFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+//
+// Gradient system
+//
+$gradients: () !default;
+$gradients: map-merge((
+    chill: linear-gradient(128.46deg, #22226D 14.45%, #141436 108.32%),
+    warm: linear-gradient(14deg, #22226D 14.45%, #141436 108.32%),
+    hot: linear-gradient(303deg, #141436 18.03%, #22226D 103.84%),
+    angle-243: linear-gradient(243deg, #141436 18.03%, #22226D 103.84%),
+    any-question:linear-gradient(128.46deg, #22226D 14.45%, #141436 108.32%),
+    angle-145:linear-gradient(154deg, #22226D 14.45%, #141436 108.32%)
+), $gradients);
+
+
+// Gradient backgrounds
+@mixin bg-gradient($parent, $gradient) {
+  #{$parent} {
+    background: $gradient;
+  }
+}
+// Gradient Classes 
+@each $gradient, $value in $gradients {
+  @include bg-gradient(".bg-gradient-#{$gradient}", $value);
+}
+
+// keyframe
+
+@-webkit-keyframes moveDown {
+    0% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes moveDown {
+    0% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// end keyframe

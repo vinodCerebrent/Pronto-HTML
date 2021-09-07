@@ -1,0 +1,73 @@
+$white: #ffffff;
+$black: #000000;
+$gray: #404243;
+
+$baseText: #2B2F32;
+$headingColor: #434343;
+$headingColor2: #333333;
+
+$border-1: #f5f5f5;
+$border-2: #e3e3e3;
+$border-3: #333333;
+$border-4: #3d3b7f;
+$border-5: #cccccc;
+// Primary Colors
+//$primary-1: #333178;
+
+$primary-1: #483D8F;
+$primary-2: #443EAF;
+$primary-3: #FF6A46;
+$primary-4: #FF8369;
+$primary-5: #3088CA;
+$primary-6: #DCDCDC;
+$primary-7: #f7f7f7;
+$primary-8: #e5e5e5;
+$primary-9: #2B2B7D;
+// Secondary Colors
+$secondary-1: #d4ceff;
+$secondary-2: #5849ff;
+$secondary-3: #f6e8ff;
+$secondary-4: #19284e;
+$secondary-5: #2d2b6e;
+$secondary-6: #f3f6fc;
+$secondary-7: #fff5f8;
+$secondary-8: #e0ebff;
+$secondary-9: #edebfc;
+$secondary-10: #373478;
+$secondary-11: #f7f7fd;
+$secondary-12: #dafff3;
+$secondary-13: #ffd2cb;
+$secondary-14: #e9e9ff;
+$secondary-15: #45438f;
+$secondary-16: #ecd5ff;
+$secondary-17: #9997c3;
+$secondary-18: #f88e61;
+$secondary-19: #fe4a4a;
+$secondary-20: #f94144;
+$secondary-21: #f3722c;
+$secondary-22: #f8961e;
+$secondary-23: #f9c74f;
+$secondary-24: #90be6d;
+
+$gray-1: #2B2F32;
+$gray-2: #404243;
+$gray-3: #7A7A7A;
+$gray-4: #DCDCDC;
+$gray-5: #F9F9F9;
+$gray-6: #ffffff;
+$gray-7:#F6F7FC;
+
+$fontSize: 16px;
+$font100: 100 !important;
+$font200: 200 !important;
+$font300: 300 !important;
+$fontNormal: 400 !important;
+$font500: 500 !important;
+$font600: 600 !important;
+$fontMedium: 700 !important;
+
+$primaryFont: 'Archivo', sans-serif;
+$secondFont: 'Poppins', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,300;0,500;0,600;0,700;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap');

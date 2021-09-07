@@ -1,0 +1,48 @@
+.radioBox {
+    margin: 0;
+    position: relative;
+    padding-left: 1.75rem;
+    cursor: pointer;
+    .radioBoxCheck {
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 1px solid var(--gray-3);
+        background-color: var(--white);
+        border-radius: 0.3125rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            right: 0.25rem;
+            bottom: 0.25rem;
+            background-color: var(--gray-3);
+            border-radius: 50%;
+        }
+    }
+    input {
+        display: none;
+        &:checked {
+            & + .radioBoxCheck {
+                border-color: var(--primary-2);
+                &:after {
+                    @include var(background-color, primary-2);
+                }
+            }
+        }
+    }
+    a {
+        color: inherit;
+        font-weight: $fontMedium;
+        &:hover {
+            @include var(color, primary-1);
+        }
+    }
+}

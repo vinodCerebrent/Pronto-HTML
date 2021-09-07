@@ -1,0 +1,11 @@
+:root {
+    @each $color, $values in $colors {
+        --#{$color}: #{$values};
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: unset !important;
+    }
+}
