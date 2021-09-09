@@ -4,10 +4,10 @@ button {
     border: 0;
     outline: 0;
     background: none;
-    cursor: pointer;
+    cursor: pointer; 
     box-shadow: none !important;
     @include transition;
-}
+} 
 .btn {
     color: $white;
     padding: 1.1rem 3rem;
