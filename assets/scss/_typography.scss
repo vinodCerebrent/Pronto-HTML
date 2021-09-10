@@ -57,7 +57,7 @@ h2,
 h3,
 .h3 {
     // font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 1.33rem;
 }
 h4,
 .h4 {
@@ -71,8 +71,8 @@ h5,
 }
 h6,
 .h6 {
-    // font-size: 14px;
-    font-size: 0.875rem;
+     // font-size: 16px;
+     font-size: .888rem;
 }
 .heading-h1 {
     // font-size: 48px;
@@ -128,4 +128,7 @@ p {
 }
 .weight-700 {
     font-weight: $fontMedium;
+}
+.weight-normal {
+    font-weight: $normal;
 }

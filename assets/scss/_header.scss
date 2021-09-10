@@ -15,3 +15,14 @@
         }
     }
 }
+.main-nav{
+    li{
+        a{
+            font-size: .67rem !important;
+            color: var(--gray-2);
+            @include min(991px) {
+                 padding: 0rem 1rem !important;
+            }
+        }   
+    }
+}
