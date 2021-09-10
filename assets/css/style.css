@@ -504,6 +504,30 @@
   background-color: #F6F7FC !important;
 }
 
+.text-gray-8 {
+  color: #F2F2F5 !important;
+}
+
+.text-gray-8 circle {
+  fill: #F2F2F5 !important;
+}
+
+.bg-gray-8 {
+  background-color: #F2F2F5 !important;
+}
+
+.text-gray-9 {
+  color: #FBFBFB !important;
+}
+
+.text-gray-9 circle {
+  fill: #FBFBFB !important;
+}
+
+.bg-gray-9 {
+  background-color: #FBFBFB !important;
+}
+
 .text-border-1 {
   color: #f5f5f5 !important;
 }
@@ -517,15 +541,15 @@
 }
 
 .text-border-2 {
-  color: #e3e3e3 !important;
+  color: #eeeeee !important;
 }
 
 .text-border-2 circle {
-  fill: #e3e3e3 !important;
+  fill: #eeeeee !important;
 }
 
 .bg-border-2 {
-  background-color: #e3e3e3 !important;
+  background-color: #eeeeee !important;
 }
 
 .text-border-3 {
@@ -541,15 +565,15 @@
 }
 
 .text-border-4 {
-  color: #3d3b7f !important;
+  color: #F2F2F5 !important;
 }
 
 .text-border-4 circle {
-  fill: #3d3b7f !important;
+  fill: #F2F2F5 !important;
 }
 
 .bg-border-4 {
-  background-color: #3d3b7f !important;
+  background-color: #F2F2F5 !important;
 }
 
 .text-border-5 {
@@ -569,7 +593,7 @@
 }
 
 .color-border-2 {
-  border-color: #e3e3e3 !important;
+  border-color: #eeeeee !important;
 }
 
 .color-border-3 {
@@ -577,7 +601,7 @@
 }
 
 .color-border-4 {
-  border-color: #3d3b7f !important;
+  border-color: #F2F2F5 !important;
 }
 
 .bg-gradient-chill {
@@ -669,7 +693,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: #2B2F32;
+  color: #404243;
   font-weight: 400 !important;
 }
 
@@ -720,7 +744,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.5rem;
+  font-size: 1.33rem;
 }
 
 h4,
@@ -735,7 +759,7 @@ h5,
 
 h6,
 .h6 {
-  font-size: 0.875rem;
+  font-size: .888rem;
 }
 
 .heading-h1 {
@@ -800,6 +824,10 @@ p {
   font-weight: 700 !important;
 }
 
+.weight-normal {
+  font-weight: normal !important;
+}
+
 :root {
   --white: #ffffff;
   --black: #000000;
@@ -843,10 +871,12 @@ p {
   --gray-5: #F9F9F9;
   --gray-6: #ffffff;
   --gray-7: #F6F7FC;
+  --gray-8: #F2F2F5;
+  --gray-9: #FBFBFB;
   --border-1: #f5f5f5;
-  --border-2: #e3e3e3;
+  --border-2: #eeeeee;
   --border-3: #333333;
-  --border-4: #3d3b7f;
+  --border-4: #F2F2F5;
   --border-5: #cccccc;
 }
 
@@ -882,8 +912,8 @@ main,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-box-shadow: inset 0 140px 0 var(--primary-1);
-          box-shadow: inset 0 140px 0 var(--primary-1);
+  -webkit-box-shadow: inset 0 140px 0 var(--gray-4);
+          box-shadow: inset 0 140px 0 var(--gray-4);
   padding-top: 85px;
 }
 
@@ -896,7 +926,7 @@ main,
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 75rem;
+    max-width: 100rem;
   }
 }
 
@@ -1341,14 +1371,31 @@ input[type="number"] {
 
 .wtermarklogo {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 30px;
 }
 
-.wtermarklogo img {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  opacity: .2;
+.breadcrumb li {
+  font-size: .67rem !important;
+  color: var(--gray-3);
+  position: relative;
+  padding-right: 20px;
+  margin-right: 5px;
+}
+
+.breadcrumb li:not(:last-child):after {
+  content: "";
+  background-image: url("../images/right-arrow.svg");
+  position: absolute;
+  right: 0px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+}
+
+.breadcrumb li a {
+  color: var(--gray-2);
 }
 
 .custom-dropdown {
@@ -1370,6 +1417,17 @@ input[type="number"] {
 .custom-dropdown li a {
   padding: 10px 15px;
   font-size: 15px;
+}
+
+.main-nav li a {
+  font-size: .67rem !important;
+  color: var(--gray-2);
+}
+
+@media (min-width: 991px) {
+  .main-nav li a {
+    padding: 0rem 1rem !important;
+  }
 }
 
 .loginSec {
@@ -1947,7 +2005,7 @@ button {
 
 .btn-white {
   background-color: #ffffff;
-  color: var(--primary-3) !important;
+  color: var(--primary-3);
 }
 
 .btn-white:hover, .btn-white:focus {
@@ -2017,7 +2075,8 @@ button {
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: var(--primary-1);
+  background-color: var(--primary-4);
+  border-color: var(--primary-4);
 }
 
 .btn-secondary {
@@ -2264,5 +2323,339 @@ button {
   background-color: var(--white);
   -webkit-box-shadow: -3px 0px 7px rgba(0, 0, 0, 0.25);
           box-shadow: -3px 0px 7px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 992px) {
+  .accountSec .accountSecInner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .accountSec .accountSecNav {
+    width: 300px;
+    border-right: 1px solid var(--border-2);
+  }
+}
+
+@media (min-width: 992px) {
+  .accountSec .accountSecContent {
+    width: calc(100% - 300px);
+    padding-left: 2.375rem;
+  }
+}
+
+.accountSec .account-heading
+, .accountSec .ac-overview {
+  border-bottom: 1px solid var(--border-2);
+}
+
+.accountSec .account-heading
+.btn svg, .accountSec .ac-overview .btn svg {
+  margin-right: 5px;
+}
+
+.accountSec .account-heading
+.btn svg path, .accountSec .ac-overview .btn svg path {
+  fill: var(--gray-3);
+}
+
+.accountSec .account-heading
+.btn:hover svg path, .accountSec .account-heading
+.btn:focus svg path, .accountSec .ac-overview .btn:hover svg path, .accountSec .ac-overview .btn:focus svg path {
+  fill: #ffffff;
+}
+
+.accountSec .social-box {
+  width: 100%;
+  padding: 1.4rem;
+  border: 1px solid var(--border-4);
+  float: left;
+}
+
+.accountSec .social-box img {
+  float: left;
+}
+
+.accountSec .social-box p {
+  float: left;
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.accountSec .social-box .btn {
+  float: right;
+}
+
+.accountnav {
+  margin: 0;
+}
+
+.accountnav li {
+  display: block;
+}
+
+.accountnav li:not(:last-child) {
+  margin-bottom: 2.1875rem;
+}
+
+.accountnav li a {
+  display: block;
+  font-size: .888rem;
+  color: #7A7A7A;
+}
+
+.accountnav li a svg, .accountnav li a img {
+  margin-right: 11px;
+}
+
+.accountnav li a svg path, .accountnav li a img path {
+  fill: var(--gray-3);
+}
+
+.accountnav li a:hover {
+  color: #FF8369;
+  position: relative;
+}
+
+.accountnav li a:hover:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 26px;
+  right: -1px;
+  background-color: #FF8369;
+}
+
+.accountnav li a:hover svg path {
+  fill: var(--primary-4);
+}
+
+.accountnav li a.active {
+  color: #FF8369;
+  position: relative;
+}
+
+.accountnav li a.active:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 26px;
+  right: -1px;
+  background-color: #FF8369;
+}
+
+.accountnav li a.active svg path {
+  fill: var(--primary-4);
+}
+
+.accountCard {
+  display: inline-block;
+  padding: 1.875rem;
+  border-radius: 0.625rem;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: inherit;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .accountCard {
+    width: 100%;
+    max-width: 370px;
+  }
+}
+
+.accountCard:hover {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+  border-color: var(--border-1);
+  color: inherit;
+}
+
+.accountCard .accountCardTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.accountSecNavDropdown {
+  display: inline-block;
+}
+
+.accountSecNavDropdown .dropdown-toggle {
+  width: 30px;
+}
+
+.accountSecNavDropdown .dropdown-toggle:after {
+  display: none;
+}
+
+.accountSecNavDropdown .dropdown-toggle .iconsClose {
+  display: none;
+}
+
+.accountSecNavDropdown .dropdown-toggle.show .iconsOpen {
+  display: none;
+}
+
+.accountSecNavDropdown .dropdown-toggle.show .iconsClose {
+  display: block;
+}
+
+.accountSecNavDropdown .dropdown-menu {
+  top: 100% !important;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  inset: unset !important;
+  left: -1.5rem !important;
+  width: 100vw;
+  background-color: var(--white);
+  border: 1px solid var(--border-2);
+  border-top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 0px;
+  margin: 1.5rem 0 0 !important;
+}
+
+.accountSecNavDropdown .dropdown-menu li {
+  display: block;
+  border-top: 1px solid var(--border-2);
+  background-color: transparent;
+}
+
+.accountSecNavDropdown .dropdown-menu li a {
+  display: block;
+  padding: 1.5rem;
+  color: var(--primary-1);
+  font-weight: 400 !important;
+}
+
+.accountSecNavDropdown .dropdown-menu li a.active {
+  font-weight: 700 !important;
+  background-color: var(--border-1);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#sidebar {
+  width: 478px;
+  position: fixed;
+  top: 0;
+  right: -478px;
+  height: 100vh;
+  z-index: 999;
+  background: #ffffff;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow-y: scroll;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+  right: 0;
+}
+
+#sidebar .sidebar-header {
+  padding: 30px 20px;
+  background: #ffffff;
+  position: relative;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+#dismiss {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#dismiss:hover {
+  color: #7386D5;
+}
+
+.dismiss {
+  position: inherit !important;
+}
+
+ul.sideNav-btn {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
 }
 /*# sourceMappingURL=style.css.map */
