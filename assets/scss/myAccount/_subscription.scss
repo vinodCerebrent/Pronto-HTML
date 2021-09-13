@@ -1,0 +1,39 @@
+div#subscription-popup {
+	.modal-dialog {
+		width: 100%;
+		max-width: 576px;
+		.modal-body {
+			padding: 40px;
+			.cust-pad {
+				padding: 14px 34px;
+			}
+		}
+	}
+}
+
+.custom-textarea{
+	label {
+		top: 0px;
+	}
+	textarea {
+		font-size: 14px;
+		color: #404243;
+		width: 100%;
+		min-height: 121px;
+		border: none;
+		padding: 3px 0px;
+		&:focus{
+			outline: none;
+		}
+		&::placeholder {
+			color: #404243;
+		  }
+	}
+}
+.down_arrow {
+	select{
+		background-image: url(../images/accountSetting/Union.svg);
+    background-repeat: no-repeat;
+
+	}
+}
