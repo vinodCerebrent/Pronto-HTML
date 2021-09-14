@@ -1,0 +1,26 @@
+.box-ul{
+    li {
+		&:not(:first-child){
+			margin-left: 14px;
+			padding-left: 14px;
+			border-left: 1px solid #DCDCDC;
+		}
+		a{
+			img{
+				float: left;
+				max-width: 13px;
+			}
+		}
+    }
+}
+
+.biiling-invoice {
+    margin: 0px;
+    padding: 0px;
+		li{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			position: relative;
+		}
+}

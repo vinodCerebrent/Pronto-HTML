@@ -754,7 +754,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 h6,
@@ -1396,6 +1396,10 @@ input[type="number"] {
 
 .breadcrumb li a {
   color: var(--gray-2);
+}
+
+.right-position {
+  float: right;
 }
 
 .custom-dropdown {
@@ -2657,5 +2661,79 @@ ul.sideNav-btn {
 a[aria-expanded="true"] {
   color: #fff;
   background: #6d7fcc;
+}
+
+.box-ul li:not(:first-child) {
+  margin-left: 14px;
+  padding-left: 14px;
+  border-left: 1px solid #DCDCDC;
+}
+
+.box-ul li a img {
+  float: left;
+  max-width: 13px;
+}
+
+.biiling-invoice {
+  margin: 0px;
+  padding: 0px;
+}
+
+.biiling-invoice li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+div#subscription-popup .modal-dialog {
+  width: 100%;
+  max-width: 576px;
+}
+
+div#subscription-popup .modal-dialog .modal-body {
+  padding: 40px;
+}
+
+div#subscription-popup .modal-dialog .modal-body .cust-pad {
+  padding: 14px 34px;
+}
+
+.custom-textarea label {
+  top: 0px;
+}
+
+.custom-textarea textarea {
+  font-size: 14px;
+  color: #404243;
+  width: 100%;
+  min-height: 121px;
+  border: none;
+  padding: 3px 0px;
+}
+
+.custom-textarea textarea:focus {
+  outline: none;
+}
+
+.custom-textarea textarea::-webkit-input-placeholder {
+  color: #404243;
+}
+
+.custom-textarea textarea:-ms-input-placeholder {
+  color: #404243;
+}
+
+.custom-textarea textarea::-ms-input-placeholder {
+  color: #404243;
+}
+
+.custom-textarea textarea::placeholder {
+  color: #404243;
+}
+
+.down_arrow select {
+  background-image: url(../images/accountSetting/Union.svg);
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
