@@ -147,6 +147,7 @@ a {
         border: 0;
         border-bottom: 1px solid var(--primary-6);
         font-size: 14px;
+        border-radius: 0px;
         &:not(:placeholder-shown),
         &:valid,
         &:focus {
