@@ -1069,6 +1069,7 @@ a {
   border: 0;
   border-bottom: 1px solid var(--primary-6);
   font-size: 14px;
+  border-radius: 0px;
 }
 
 .formItm input:not(:placeholder-shown) + label, .formItm input:valid + label, .formItm input:focus + label,
@@ -2710,6 +2711,7 @@ div#subscription-popup .modal-dialog .modal-body .cust-pad {
   min-height: 121px;
   border: none;
   padding: 3px 0px;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .custom-textarea textarea:focus {
