@@ -805,12 +805,16 @@ p {
 }
 
 .text-lg {
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "Archivo", sans-serif;
 }
 
 .text-xl {
   font-size: 1.125rem;
+}
+
+.text-xxl {
+  font-size: 20px;
 }
 
 .weight-100 {
@@ -1442,6 +1446,10 @@ a.text-gray-2:hover svg path, a.text-gray-3:hover svg path {
   fill: #ffffff !important;
 }
 
+.w-184 {
+  min-width: 184px;
+}
+
 .custom-dropdown {
   padding: 0px;
   margin: 0px;
@@ -1957,7 +1965,7 @@ li.nav-item.dropdown:hover ul.dropdown-menu.custom-dropdown {
 }
 
 .loginSecItmContent-plane {
-  padding: 3rem 0;
+  padding: 40px 0;
 }
 
 .loginSecItmContent-plane ul.trouble-signin li {
@@ -2008,6 +2016,13 @@ li.nav-item.dropdown:hover ul.dropdown-menu.custom-dropdown {
 
 .loginSecItmContent-plane ul.trouble-signin li:not(:last-child) {
   border-bottom: 1px solid #DCDCDC;
+}
+
+figure.timer {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  margin: 0px;
 }
 
 button {
@@ -2570,6 +2585,16 @@ button {
 
 .accountnav li .custom-switch input:checked {
   background-position: center right -2px;
+}
+
+.accountnav li .custom-switch input:checked + label {
+  color: var(--gray-1) !important;
+}
+
+.accountnav li .custom-switch input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .accountCard {
