@@ -11,7 +11,7 @@ button {
 .btn {
     color: $white;
     padding: 1.1rem 3rem;
-    font-size: 0.78rem;
+    font-size: 14px;
     border-radius: 100px;
     line-height: 1em;
     font-weight: $font600;
@@ -23,6 +23,11 @@ button {
     @include max(767px) {
         padding: 0.775rem 1.3rem;
         font-size: 0.8777rem;
+    }
+    &.small-pad{    
+        padding: 8.5px 12px;
+        display: initial;
+        line-height: 17px;
     }
     &-block {
         display: block;
@@ -54,7 +59,8 @@ button {
         color: var(--primary-3);
         &:hover,
         &:focus {
-            color: var(--primary-1) !important;
+            color: $white !important;
+            background-color: var(--primary-4);
         }
     }
     &-danger {

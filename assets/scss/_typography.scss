@@ -10,6 +10,7 @@ body {
     font-size: 1rem;
     color: $baseText;
     font-weight: $fontNormal;
+
 }
 .heading-lg {
     // font-size: 36px;
@@ -87,14 +88,18 @@ p {
     line-height: 1.5em;
     
 }
+.text-xxs {
+    // font-size: 10px;
+    font-size: 10px;
+}
 .text-xs {
      // font-size: 12px;
-     font-size: .67rem !important;
+     font-size: 12px;
      line-height: normal;
 }
 .text-sm {
     // font-size: 14px;
-    font-size: 0.78rem;
+    font-size: 14px;
 }
 .text-md {
     // font-size: 14px;
@@ -102,7 +107,8 @@ p {
 }
 .text-lg {
     // font-size: 16px;
-    font-size: .888rem;
+    font-size: 1rem;
+    font-family: $primaryFont;
 }
 .text-xl {
     // font-size: 18px;

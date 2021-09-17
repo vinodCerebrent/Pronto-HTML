@@ -156,7 +156,7 @@ a {
             }
         }
         &:focus {
-            border-color: var(--primary-2);
+            border-color: var(--primary-4);
         }
         &::placeholder {
             opacity: 0;
@@ -413,6 +413,7 @@ input[type="number"] {
     background-repeat: no-repeat;
     background-position: bottom right;
     position: relative;
+    overflow: hidden;
 }
 
 .wtermarklogo {
@@ -424,7 +425,8 @@ input[type="number"] {
 .breadcrumb{
     li {
         font-size: .67rem !important;
-        color: var(--gray-3);
+       
+        color: var(--gray-2);
         position: relative;
         padding-right: 20px;
         margin-right: 5px;
@@ -441,10 +443,35 @@ input[type="number"] {
             }
         }
         a{
-            color: var(--gray-2);
+            color: var(--gray-3);
+            &:hover{
+                color: var(--primary-3);
+            }
         }
     }
 }
 .right-position {
     float: right;
+}
+
+a.text-gray-2, a.text-gray-3{
+    &:hover{
+        color: var(--primary-4) !important;
+        svg{
+           path{
+            fill: var(--primary-4) !important;
+           }
+        }
+    }
+}
+
+.btn.text-gray-2, .btn.text-gray-3{
+    &:hover{
+        color: $white !important;
+        svg{
+            path{
+                fill: $white !important;
+            }
+        }
+    }
 }

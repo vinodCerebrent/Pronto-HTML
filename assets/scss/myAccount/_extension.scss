@@ -64,6 +64,9 @@ ul.sideNav-btn {
   position: fixed;
   width: 100%;
   bottom: 0px;
+  a.weight-normal.btn {
+    padding: 14px 34px !important;
+	}
 }
 .overlay {
 	display: none;
@@ -79,8 +82,4 @@ ul.sideNav-btn {
 		opacity: 1;
 	}
 }
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-	color: #fff;
-	background: #6d7fcc;
-}
+
