@@ -493,15 +493,15 @@
 }
 
 .text-gray-6 {
-  color: #ffffff !important;
+  color: #BABCBE !important;
 }
 
 .text-gray-6 circle {
-  fill: #ffffff !important;
+  fill: #BABCBE !important;
 }
 
 .bg-gray-6 {
-  background-color: #ffffff !important;
+  background-color: #BABCBE !important;
 }
 
 .text-gray-7 {
@@ -887,7 +887,7 @@ p {
   --gray-3: #7A7A7A;
   --gray-4: #DCDCDC;
   --gray-5: #F9F9F9;
-  --gray-6: #ffffff;
+  --gray-6: #BABCBE;
   --gray-7: #F6F7FC;
   --gray-8: #F2F2F5;
   --gray-9: #FBFBFB;
@@ -2548,8 +2548,12 @@ button {
 .accountnav li .custom-switch label.form-check-label {
   float: left;
   font-size: 12px;
-  color: var(--gray-2);
+  color: var(--gray-6);
   margin-top: 4px;
+}
+
+.accountnav li .custom-switch label.form-check-label.active {
+  color: var(--gray-1);
 }
 
 .accountnav li .custom-switch input {
