@@ -361,7 +361,7 @@
 }
 
 .loginSecItmContent-plane {
-    padding: 3rem 0;
+    padding: 40px 0;
     ul.trouble-signin{
         li {
             width: 100%;
@@ -408,4 +408,10 @@
             }
         }
     }
+}
+figure.timer {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    margin: 0px;
 }

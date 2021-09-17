@@ -107,12 +107,16 @@ p {
 }
 .text-lg {
     // font-size: 16px;
-    font-size: 1rem;
+    font-size: 16px;
     font-family: $primaryFont;
 }
 .text-xl {
     // font-size: 18px;
     font-size: 1.125rem;
+}
+.text-xxl {
+    // font-size: 20px;
+    font-size: 20px;
 }
 .weight-100 {
     font-weight: $font100;
