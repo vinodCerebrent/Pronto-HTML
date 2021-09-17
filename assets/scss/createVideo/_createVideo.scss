@@ -1,0 +1,25 @@
+.breadcrumb-tabs{
+    li{
+        padding: 8px 14px;
+        position: relative;
+        .nav-link {
+            padding: 10px;
+            font-size: 12px;
+            color:  var(--gray-2);
+            position: relative;
+            &.active{
+                color:  var(--primary-4);
+                font-weight: $font600;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 27px;
+                    height: 2px;
+                    background-color: var(--primary-4);
+                    left: 10px;
+                    bottom: -8px;
+                }
+            }
+        }
+    }
+}

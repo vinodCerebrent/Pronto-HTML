@@ -22,7 +22,7 @@ div#subscription-popup {
 		min-height: 121px;
 		border: none;
 		padding: 3px 0px;
-		border-bottom: 1px solid #dcdcdc;
+		border-bottom: 1px solid var(--gray-4);
 		&:focus{
 			outline: none;
 		}
@@ -36,5 +36,131 @@ div#subscription-popup {
 		background-image: url(../images/accountSetting/Union.svg);
     background-repeat: no-repeat;
 
+	}
+}
+
+
+.plan-deials {
+    padding: 30px 25px;
+	.plan_heading {
+		display: flex;
+		h4{
+			width: 100%;
+			font-size: 18px;
+			span{
+				font-family: "Poppins", sans-serif;
+				font-weight: $fontNormal;
+			}
+		}
+	}
+	.price-info {
+		margin-bottom: 25px;
+		color: $baseText;
+		sup {
+			position: relative;
+			top: -9px;
+			font-size: 17px;
+			margin-right: 2px;
+			font-family: "Archivo", sans-serif;
+		}
+		h3{
+			font-family: "Poppins", sans-serif !important;
+		}
+		h5 {
+			display: inline-block;
+			font-size: 28px;
+			font-weight: $fontNormal;
+			color: $baseText;
+		}
+		span {
+			font-size: 14px;
+			padding-left: 4px;
+		}
+		.year-val{
+			display: none;
+		}
+		&.year_value{
+			.month-val{
+				display: none;
+			}
+			.year-val{
+				display: inline-block;
+			}
+		}
+	}
+	ul{
+		border-top: 1px solid var(--border-4);
+		padding: 20px 0px;
+		margin: 20px 0px;
+		li{
+			font-size: 12px;
+			margin-bottom: 20px;
+			padding-left: 30px;
+			position: relative;
+			line-height: normal;
+			color: $gray-3;
+			svg{
+				position: absolute;
+				left: 0px;
+				top: 3px;
+				path{
+					fill:var(--gray-1);
+				}
+			}
+		}
+		p{
+			a.btn{
+				width: 100%;
+				padding: 10px;
+				font-size: 12px;
+				color: var(--primary-1);
+			}
+		}
+	}
+	&.defult-price{
+		p{
+			a.btn{
+				opacity: 0;
+				color: $white;
+			}
+		}
+		&:hover{
+			background-color: $white;
+			p{
+				a.btn{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&.bg-white{
+		ul{
+			li{
+				svg{
+					path{
+						fill:var(--primary-10);
+					}
+				}
+			}
+		}
+	}
+	&.bg-primary-1{
+		color: $white;
+		.price-info {
+			color: $white;
+			h5 {
+				color: $white;
+			}
+		}
+		ul{
+			li{
+				color: $white;
+				svg{
+					path{
+						fill:var(--primary-10);
+					}
+				}
+			}
+		}
 	}
 }

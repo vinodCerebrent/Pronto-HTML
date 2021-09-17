@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,300;0,500;0,600;0,700;1,100;1,200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .text-white {
   color: #ffffff !important;
 }
@@ -130,6 +130,18 @@
 
 .bg-primary-9 {
   background-color: #2B2B7D !important;
+}
+
+.text-primary-10 {
+  color: #00C599 !important;
+}
+
+.text-primary-10 circle {
+  fill: #00C599 !important;
+}
+
+.bg-primary-10 {
+  background-color: #00C599 !important;
 }
 
 .text-secondary-1 {
@@ -775,13 +787,17 @@ p {
   line-height: 1.5em;
 }
 
+.text-xxs {
+  font-size: 10px;
+}
+
 .text-xs {
-  font-size: .67rem !important;
+  font-size: 12px;
   line-height: normal;
 }
 
 .text-sm {
-  font-size: 0.78rem;
+  font-size: 14px;
 }
 
 .text-md {
@@ -789,7 +805,8 @@ p {
 }
 
 .text-lg {
-  font-size: .888rem;
+  font-size: 1rem;
+  font-family: "Archivo", sans-serif;
 }
 
 .text-xl {
@@ -840,6 +857,7 @@ p {
   --primary-7: #f7f7f7;
   --primary-8: #e5e5e5;
   --primary-9: #2B2B7D;
+  --primary-10: #00C599;
   --secondary-1: #d4ceff;
   --secondary-2: #5849ff;
   --secondary-3: #f6e8ff;
@@ -1081,7 +1099,7 @@ a {
 
 .formItm input:focus,
 .formItm select:focus {
-  border-color: var(--primary-2);
+  border-color: var(--primary-4);
 }
 
 .formItm input::-webkit-input-placeholder,
@@ -1368,6 +1386,7 @@ input[type="number"] {
   background-repeat: no-repeat;
   background-position: bottom right;
   position: relative;
+  overflow: hidden;
 }
 
 .wtermarklogo {
@@ -1378,7 +1397,7 @@ input[type="number"] {
 
 .breadcrumb li {
   font-size: .67rem !important;
-  color: var(--gray-3);
+  color: var(--gray-2);
   position: relative;
   padding-right: 20px;
   margin-right: 5px;
@@ -1396,11 +1415,31 @@ input[type="number"] {
 }
 
 .breadcrumb li a {
-  color: var(--gray-2);
+  color: var(--gray-3);
+}
+
+.breadcrumb li a:hover {
+  color: var(--primary-3);
 }
 
 .right-position {
   float: right;
+}
+
+a.text-gray-2:hover, a.text-gray-3:hover {
+  color: var(--primary-4) !important;
+}
+
+a.text-gray-2:hover svg path, a.text-gray-3:hover svg path {
+  fill: var(--primary-4) !important;
+}
+
+.btn.text-gray-2:hover, .btn.text-gray-3:hover {
+  color: #ffffff !important;
+}
+
+.btn.text-gray-2:hover svg path, .btn.text-gray-3:hover svg path {
+  fill: #ffffff !important;
 }
 
 .custom-dropdown {
@@ -1424,6 +1463,10 @@ input[type="number"] {
   font-size: 15px;
 }
 
+.main-nav {
+  position: relative;
+}
+
 .main-nav li a {
   font-size: .67rem !important;
   color: var(--gray-2);
@@ -1433,6 +1476,29 @@ input[type="number"] {
   .main-nav li a {
     padding: 0rem 1rem !important;
   }
+}
+
+.main-nav li a:hover {
+  color: var(--primary-3);
+}
+
+@media (min-width: 991px) {
+  .divader-left {
+    position: relative;
+  }
+  .divader-left:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color: #DCDCDC;
+    left: -30px;
+    top: 13px;
+  }
+}
+
+li.nav-item.dropdown:hover ul.dropdown-menu.custom-dropdown {
+  display: block;
 }
 
 .loginSec {
@@ -1960,7 +2026,7 @@ button {
 .btn {
   color: #ffffff;
   padding: 1.1rem 3rem;
-  font-size: 0.78rem;
+  font-size: 14px;
   border-radius: 100px;
   line-height: 1em;
   font-weight: 600 !important;
@@ -1977,6 +2043,12 @@ button {
     padding: 0.775rem 1.3rem;
     font-size: 0.8777rem;
   }
+}
+
+.btn.small-pad {
+  padding: 8.5px 12px;
+  display: initial;
+  line-height: 17px;
 }
 
 .btn-block {
@@ -2014,7 +2086,8 @@ button {
 }
 
 .btn-white:hover, .btn-white:focus {
-  color: var(--primary-1) !important;
+  color: #ffffff !important;
+  background-color: var(--primary-4);
 }
 
 .btn-danger {
@@ -2330,6 +2403,10 @@ button {
           box-shadow: -3px 0px 7px rgba(0, 0, 0, 0.25);
 }
 
+.accountSec .accountSecInner {
+  height: inherit;
+}
+
 @media (min-width: 992px) {
   .accountSec .accountSecInner {
     display: -webkit-box;
@@ -2388,6 +2465,11 @@ button {
   float: left;
   display: inline-block;
   padding: 0px 15px;
+  font-family: "Archivo", sans-serif;
+}
+
+.accountSec .social-box p span {
+  font-family: "Poppins", sans-serif;
 }
 
 .accountSec .social-box .btn {
@@ -2408,7 +2490,8 @@ button {
 
 .accountnav li a {
   display: block;
-  font-size: .888rem;
+  font-size: 16px;
+  font-family: "Archivo", sans-serif;
   color: #7A7A7A;
 }
 
@@ -2454,6 +2537,35 @@ button {
 
 .accountnav li a.active svg path {
   fill: var(--primary-4);
+}
+
+.accountnav li .custom-switch {
+  padding: 20px 0px 0px 31px;
+  float: left;
+  width: 100%;
+}
+
+.accountnav li .custom-switch label.form-check-label {
+  float: left;
+  font-size: 12px;
+  color: var(--gray-2);
+  margin-top: 4px;
+}
+
+.accountnav li .custom-switch input {
+  float: left !important;
+  position: inherit !important;
+  padding: 13px;
+  background-color: var(--primary-1);
+  border: none;
+  margin: 0px 10px;
+  background-size: 31px;
+  background-position: center left -2px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.accountnav li .custom-switch input:checked {
+  background-position: center right -2px;
 }
 
 .accountCard {
@@ -2641,6 +2753,10 @@ ul.sideNav-btn {
   bottom: 0px;
 }
 
+ul.sideNav-btn a.weight-normal.btn {
+  padding: 14px 34px !important;
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -2656,12 +2772,6 @@ ul.sideNav-btn {
 .overlay.active {
   display: block;
   opacity: 1;
-}
-
-#sidebar ul li.active > a,
-a[aria-expanded="true"] {
-  color: #fff;
-  background: #6d7fcc;
 }
 
 .box-ul li:not(:first-child) {
@@ -2711,7 +2821,7 @@ div#subscription-popup .modal-dialog .modal-body .cust-pad {
   min-height: 121px;
   border: none;
   padding: 3px 0px;
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid var(--gray-4);
 }
 
 .custom-textarea textarea:focus {
@@ -2737,5 +2847,162 @@ div#subscription-popup .modal-dialog .modal-body .cust-pad {
 .down_arrow select {
   background-image: url(../images/accountSetting/Union.svg);
   background-repeat: no-repeat;
+}
+
+.plan-deials {
+  padding: 30px 25px;
+}
+
+.plan-deials .plan_heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plan-deials .plan_heading h4 {
+  width: 100%;
+  font-size: 18px;
+}
+
+.plan-deials .plan_heading h4 span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400 !important;
+}
+
+.plan-deials .price-info {
+  margin-bottom: 25px;
+  color: #404243;
+}
+
+.plan-deials .price-info sup {
+  position: relative;
+  top: -9px;
+  font-size: 17px;
+  margin-right: 2px;
+  font-family: "Archivo", sans-serif;
+}
+
+.plan-deials .price-info h3 {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.plan-deials .price-info h5 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400 !important;
+  color: #404243;
+}
+
+.plan-deials .price-info span {
+  font-size: 14px;
+  padding-left: 4px;
+}
+
+.plan-deials .price-info .year-val {
+  display: none;
+}
+
+.plan-deials .price-info.year_value .month-val {
+  display: none;
+}
+
+.plan-deials .price-info.year_value .year-val {
+  display: inline-block;
+}
+
+.plan-deials ul {
+  border-top: 1px solid var(--border-4);
+  padding: 20px 0px;
+  margin: 20px 0px;
+}
+
+.plan-deials ul li {
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  position: relative;
+  line-height: normal;
+  color: #7A7A7A;
+}
+
+.plan-deials ul li svg {
+  position: absolute;
+  left: 0px;
+  top: 3px;
+}
+
+.plan-deials ul li svg path {
+  fill: var(--gray-1);
+}
+
+.plan-deials ul p a.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  color: var(--primary-1);
+}
+
+.plan-deials.defult-price p a.btn {
+  opacity: 0;
+  color: #ffffff;
+}
+
+.plan-deials.defult-price:hover {
+  background-color: #ffffff;
+}
+
+.plan-deials.defult-price:hover p a.btn {
+  opacity: 1;
+}
+
+.plan-deials.bg-white ul li svg path {
+  fill: var(--primary-10);
+}
+
+.plan-deials.bg-primary-1 {
+  color: #ffffff;
+}
+
+.plan-deials.bg-primary-1 .price-info {
+  color: #ffffff;
+}
+
+.plan-deials.bg-primary-1 .price-info h5 {
+  color: #ffffff;
+}
+
+.plan-deials.bg-primary-1 ul li {
+  color: #ffffff;
+}
+
+.plan-deials.bg-primary-1 ul li svg path {
+  fill: var(--primary-10);
+}
+
+.breadcrumb-tabs li {
+  padding: 8px 14px;
+  position: relative;
+}
+
+.breadcrumb-tabs li .nav-link {
+  padding: 10px;
+  font-size: 12px;
+  color: var(--gray-2);
+  position: relative;
+}
+
+.breadcrumb-tabs li .nav-link.active {
+  color: var(--primary-4);
+  font-weight: 600 !important;
+}
+
+.breadcrumb-tabs li .nav-link.active:after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 2px;
+  background-color: var(--primary-4);
+  left: 10px;
+  bottom: -8px;
 }
 /*# sourceMappingURL=style.css.map */

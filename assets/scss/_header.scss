@@ -16,6 +16,7 @@
     }
 }
 .main-nav{
+    position: relative;
     li{
         a{
             font-size: .67rem !important;
@@ -23,6 +24,31 @@
             @include min(991px) {
                  padding: 0rem 1rem !important;
             }
+            &:hover{
+                color: var(--primary-3);
+            }
         }   
     }
+}
+.divader-left{
+    @include min(991px) {
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 20px;
+            background-color: #DCDCDC;
+            left: -30px;
+            top: 13px;
+        }
+    }
+}
+
+li.nav-item.dropdown {
+	&:hover {
+		ul.dropdown-menu.custom-dropdown {
+			display: block;
+		}
+	}
 }
